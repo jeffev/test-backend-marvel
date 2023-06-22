@@ -2,6 +2,20 @@
 
 Este é um projeto em NestJS que utiliza TypeScript e um banco de dados em memória com o TypeORM. O objetivo do projeto é conectar-se à API da Marvel, carregar os dados dos heróis e disponibilizá-los através de uma API. Além disso, o projeto permite favoritar os heróis, salvando essas informações no banco de dados em memória.
 
+## Escolha da tecnologia
+Motivação
+A escolha do NestJS como framework para este projeto foi baseada em vários fatores. O NestJS é um framework Node.js que utiliza a arquitetura modular e é inspirado no Angular. Ele fornece uma estrutura robusta e escalável para o desenvolvimento de aplicativos backend. Alguns motivos para utilizar o NestJS neste projeto são:
+
+1. Arquitetura modular: O NestJS utiliza a arquitetura de módulos, permitindo uma organização clara e modularizada do código. Isso facilita a manutenção, testabilidade e escalabilidade do projeto.
+2. Suporte TypeScript: O NestJS é construído com TypeScript, o que traz recursos avançados de tipagem estática e facilita o desenvolvimento, depuração e refatoração do código.
+3. Injeção de dependência: O NestJS possui um poderoso sistema de injeção de dependência embutido, que facilita a implementação de padrões como Inversão de Controle (IoC) e Injeção de Dependência (DI). Isso torna o código mais modular, reutilizável e testável.
+
+A escolha do TypeORM para o banco de dados em memória foi feita considerando a simplicidade e flexibilidade que ele oferece. Algumas vantagens de utilizar o TypeORM com um banco de dados em memória são:
+
+1. Facilidade de uso: O TypeORM oferece uma API simples e intuitiva para interagir com o banco de dados, permitindo criar, atualizar, consultar e excluir registros de forma fácil e eficiente.
+2. Banco de dados em memória: O uso de um banco de dados em memória é útil em cenários de desenvolvimento e testes, onde não é necessário manter dados persistentes. Isso agiliza o ciclo de desenvolvimento e permite executar testes de forma isolada e rápida.
+3. Suporte a diversos bancos de dados: O TypeORM é compatível com uma ampla variedade de bancos de dados, incluindo bancos de dados em memória, como SQLite e MySQL em memória. Isso oferece flexibilidade para migrar facilmente para um banco de dados persistente quando necessário.
+
 ## Pré-requisitos
 
 Antes de executar o projeto, certifique-se de ter o seguinte instalado em sua máquina:

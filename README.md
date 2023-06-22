@@ -72,3 +72,18 @@ Favorita um herói, salvando essa informação no banco de dados em memória e s
 {
   "heroId": 1009639
 }
+
+## Validações
+
+- Se o herói já existe como favorito, retorna: `"error": "Favorite already exists"` (status code 409)
+- Se o herói não existe na base da Marvel, retorna: `"error": "Hero not found"` (status code 404)
+- Se o ID do herói for inválido, retorna: `"error": "Invalid hero ID"` (status code 400)
+
+## GET /favorites
+
+Retorna a lista de heróis favoritos.
+
+## DELETE /favorites
+
+Deleta todos os favoritos.
+

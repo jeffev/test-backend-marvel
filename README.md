@@ -34,43 +34,41 @@ npm run start
 
 Isso iniciará o servidor localmente e a API estará disponível em http://localhost:3000.
 
-Uso da API
+# Uso da API
+
 A API possui os seguintes endpoints:
 
-GET /heros/heros-local
+## GET /heros/heros-local
+
 Retorna a lista de heróis locais (somente os que foram salvos em memória).
 
-Parâmetro opcional: name (filtra heróis que contenham o nome informado)
-Exemplo de uso: /heros/heros-local?name=super
+- Parâmetro opcional: `name` (filtra heróis que contenham o nome informado)
 
-GET /heros/heros-marvel
+Exemplo de uso: `/heros/heros-local?name=super`
+
+## GET /heros/heros-marvel
+
 Retorna a lista de heróis da API da Marvel.
 
-Parâmetro opcional: name (filtra heróis que contenham o nome informado)
-Exemplo de uso: /heros/heros-marvel?name=super
+- Parâmetro opcional: `name` (filtra heróis que contenham o nome informado)
 
-POST /heroes/save-heros
+Exemplo de uso: `/heros/heros-marvel?name=super`
+
+## POST /heroes/save-heros
+
 Busca os heróis na API da Marvel e os salva em memória. Retorna os heróis criados e salvos no formato JSON.
 
-Parâmetro opcional: name (filtra heróis que contenham o nome informado)
-Exemplo de uso: /heros/save-heros?name=super
+- Parâmetro opcional: `name` (filtra heróis que contenham o nome informado)
 
-POST /favorites
+Exemplo de uso: `/heros/save-heros?name=super`
+
+## POST /favorites
+
 Favorita um herói, salvando essa informação no banco de dados em memória e salvando o herói. Retorna o favorito criado no formato JSON.
 
-Informação deve ser enviada no corpo da requisição. Exemplo do corpo da requisição:
-json
-Copy code
+- Informação deve ser enviada no corpo da requisição. Exemplo do corpo da requisição:
+
+```json
 {
   "heroId": 1009639
 }
-Validações:
-
-Se o herói já existe como favorito, retorna: "error": "Favorite already exists" (status code 409)
-Se o herói não existe na base da Marvel, retorna: "error": "Hero not found" (status code 404)
-Se o ID do herói for inválido, retorna: "error": "Invalid hero ID" (status code 400)
-GET /favorites
-Retorna a lista de heróis favoritos.
-
-DELETE /favorites
-Deleta todos os favoritos.

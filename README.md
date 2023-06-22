@@ -28,7 +28,7 @@ Antes de executar o projeto, certifique-se de ter o seguinte instalado em sua m�
 1. Clone o repositório do projeto:
 
 ```shell
-    git clone https://github.com/jeffev/nestjs-marvel-heroes-api.git
+    git clone https://github.com/jeffev/test-backend-marvel.git
 ```
  
 2. Acesse o diretório do projeto:

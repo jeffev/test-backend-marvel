@@ -72,6 +72,7 @@ Favorita um herói, salvando essa informação no banco de dados em memória e s
 {
   "heroId": 1009639
 }
+```
 
 ## Validações
 

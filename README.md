@@ -1,33 +1,44 @@
-Projeto NestJS com In Memory Database (TypeORM) - API de Heróis da Marvel
+# Projeto NestJS com In Memory Database (TypeORM) - API de Heróis da Marvel
 
 Este é um projeto em NestJS que utiliza TypeScript e um banco de dados em memória com o TypeORM. O objetivo do projeto é conectar-se à API da Marvel, carregar os dados dos heróis e disponibilizá-los através de uma API. Além disso, o projeto permite favoritar os heróis, salvando essas informações no banco de dados em memória.
 
-Pré-requisitos:
+## Pré-requisitos
+
 Antes de executar o projeto, certifique-se de ter o seguinte instalado em sua máquina:
-    Node.js
-    NestJS CLI
 
-Instalação
-Clone o repositório do projeto:
-git clone https://github.com/jeffev/nestjs-marvel-heroes-api.git
+- Node.js
+- NestJS CLI
 
-Acesse o diretório do projeto:
+## Instalação
+
+1. Clone o repositório do projeto:
+
+```shell
+    git clone https://github.com/jeffev/nestjs-marvel-heroes-api.git
+```
+ 
+2. Acesse o diretório do projeto:
+```shell
 cd nestjs-marvel-heroes-api
+```
 
-Instale as dependências do projeto:
+3. Instale as dependências do projeto:
+```shell
 npm install
+```
 
-Configuração
+## Configuração
 Antes de executar o projeto, é necessário configurar as chaves de acesso à API da Marvel. Siga as etapas abaixo:
 Acesse o site Marvel Developer Portal e crie uma conta (caso ainda não tenha).
 Após criar a conta, acesse o Dashboard e obtenha as chaves de acesso (public key e private key).
 No diretório do projeto, crie um arquivo .env e adicione as seguintes linhas:
-Copy
 
 PUBLIC_KEY=SUA_PUBLIC_KEY
 PRIVATE_KEY=SUA_PRIVATE_KEY
 
 Substitua SUA_PUBLIC_KEY e SUA_PRIVATE_KEY pelas chaves de acesso obtidas no passo anterior.
+
+## Executando o projeto
 
 Após a configuração, você pode executar o projeto com o seguinte comando:
 npm run start

@@ -113,5 +113,13 @@ Retorna a lista de heróis favoritos.
 
 ## DELETE /favorites
 
-Deleta todos os favoritos.
+Deleta o favorito informado. Exemplo do corpo da requisição:
+
+```json
+{
+  "heroId": 1009639
+}
+```
+
+
 

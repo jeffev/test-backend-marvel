@@ -31,9 +31,9 @@ npm install
 
 Antes de executar o projeto, é necessário configurar as chaves de acesso à API da Marvel. Siga as etapas abaixo:
 
-"1." Acesse o site Marvel Developer Portal e crie uma conta (caso ainda não tenha).
-"2." Após criar a conta, acesse o Dashboard e obtenha as chaves de acesso (public key e private key).
-"3." No diretório do projeto, crie um arquivo .env e adicione as seguintes linhas:
+1. Acesse o site Marvel Developer Portal e crie uma conta (caso ainda não tenha).
+2. Após criar a conta, acesse o Dashboard e obtenha as chaves de acesso (public key e private key).
+3. No diretório do projeto, crie um arquivo .env e adicione as seguintes linhas:
 
 PUBLIC_KEY=SUA_PUBLIC_KEY
 PRIVATE_KEY=SUA_PRIVATE_KEY

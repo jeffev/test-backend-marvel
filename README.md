@@ -34,29 +34,43 @@ npm run start
 
 Isso iniciará o servidor localmente e a API estará disponível em http://localhost:3000.
 
-Uso da API:
+Uso da API
 A API possui os seguintes endpoints:
-GET /heros/heros-local: Retorna a lista de heróis local (somente dos que foram salvos em memoria). 
-    - parametro opcional: name (erá filtrar herois que contenham o nome passado)
-    Exemplo: heros/heros-local?name=super
-GET /heros/heros-marvel: Retorna a lista de heróis da API da Marvel.
-    - parametro opcional: name (erá filtrar herois que contenham o nome passado)
-    Exemplo: heros/heros-marvel?name=super
-POST /heroes/save-heros: Irá buscar os herois na API da Marvel e salvará em memoria, retornará no json os herois criados e salvos
-    - parametro opcional: name (erá filtrar herois que contenham o nome passado)
-    Exemplo: heros/save-heros?name=super
-POST /favorites: Favorita um herói, salvando essa informação no banco de dados em memória e salvando o heroi. retornará no json do favorito criado
-    - Informação deve vir no body, Exemplo do body da requisição:
-    {
-        "heroId": 1009639
-    }
-    Validações:
-        - Se o heroi já existe como favorito retornará: "error": "Favorite already exists" status code 409
-        - Se o heroi não existe na base da Marvel retornará: "error": "Hero not found" status code 404
-        - Se o id do heroi for inválido retornará: "error": "Invalid hero ID"  status code 400
-GET /favorites: Retorna a lista de heróis favoritos.
-DELETE /favorites: Irá deletar todos os favoritos.
 
+GET /heros/heros-local
+Retorna a lista de heróis locais (somente os que foram salvos em memória).
 
+Parâmetro opcional: name (filtra heróis que contenham o nome informado)
+Exemplo de uso: /heros/heros-local?name=super
 
-Se o herói não for encontrado, uma exceção será lançada com a mensagem "Hero not found" e o status HTTP 404 (Not Found). Se o favorito já existir, uma exceção será lançada com a mensagem "Favorite already exists" e o status HTTP 409 (Conflict).
+GET /heros/heros-marvel
+Retorna a lista de heróis da API da Marvel.
+
+Parâmetro opcional: name (filtra heróis que contenham o nome informado)
+Exemplo de uso: /heros/heros-marvel?name=super
+
+POST /heroes/save-heros
+Busca os heróis na API da Marvel e os salva em memória. Retorna os heróis criados e salvos no formato JSON.
+
+Parâmetro opcional: name (filtra heróis que contenham o nome informado)
+Exemplo de uso: /heros/save-heros?name=super
+
+POST /favorites
+Favorita um herói, salvando essa informação no banco de dados em memória e salvando o herói. Retorna o favorito criado no formato JSON.
+
+Informação deve ser enviada no corpo da requisição. Exemplo do corpo da requisição:
+json
+Copy code
+{
+  "heroId": 1009639
+}
+Validações:
+
+Se o herói já existe como favorito, retorna: "error": "Favorite already exists" (status code 409)
+Se o herói não existe na base da Marvel, retorna: "error": "Hero not found" (status code 404)
+Se o ID do herói for inválido, retorna: "error": "Invalid hero ID" (status code 400)
+GET /favorites
+Retorna a lista de heróis favoritos.
+
+DELETE /favorites
+Deleta todos os favoritos.

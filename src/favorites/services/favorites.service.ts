@@ -53,7 +53,11 @@ export class FavoritesService {
     return this.favoritesRepository.find();
   }
 
-  deleteAllFavorites() {
-    return this.favoritesRepository.delete({});
+  async deleteFavorite(heroId: number) {
+    return await this.favoritesRepository
+      .createQueryBuilder()
+      .delete()
+      .where('favorite.hero_id = :heroId', { heroId })
+      .execute();
   }
 }

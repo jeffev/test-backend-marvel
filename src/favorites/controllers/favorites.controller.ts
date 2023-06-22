@@ -40,10 +40,10 @@ export class FavoritesController {
   }
 
   @Delete()
-  async deleteAllFavorites() {
+  async deleteFavorite(@Body('heroId') heroId: number) {
     try {
-      await this.favoritesService.deleteAllFavorites();
-      return 'All favorites deleted successfully';
+      await this.favoritesService.deleteFavorite(heroId);
+      return 'Favorite deleted successfully';
     } catch (error) {
       throw new HttpException('Error deleting favorites', HttpStatus.INTERNAL_SERVER_ERROR);
     }
